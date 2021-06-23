@@ -12,7 +12,7 @@ router.get("/ping", (req, res) => {
 
 router.get("/states", UserController.getState);
 
-router.post("/user/singin", AuthController.singin);
+router.post("/user/singin", AuthValidator.singin, AuthController.singin);
 router.post("/user/singup", AuthValidator.singup, AuthController.singup);
 
 router.get("/user/me", Auth.private, UserController.info);
