@@ -19,7 +19,12 @@ router.post("/user/singin", AuthValidator.singin, AuthController.singin);
 router.post("/user/singup", AuthValidator.singup, AuthController.singup);
 
 router.get("/user/me", Auth.private, UserController.info);
-router.put("/user/me", UserValidator.editAction, Auth.private, UserController.editAction);
+router.put(
+  "/user/me",
+  UserValidator.editAction,
+  Auth.private,
+  UserController.editAction
+);
 
 router.get("/categories", AdsController.getCategories);
 
