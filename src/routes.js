@@ -25,7 +25,6 @@ router.put(
   Auth.private,
   UserController.editAction
 );
-
 router.get("/categories", AdsController.getCategories);
 
 router.post("/ad/add", Auth.private, AdsController.addAction);
