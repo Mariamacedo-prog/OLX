@@ -30,7 +30,7 @@ module.exports = {
       adList.push({
         id: ads[i]._id,
         status: ads[i].status,
-        image: ads[i].image,
+        images: ads[i].images,
         dateCreated: ads[i].dateCreated,
         title: ads[i].title,
         price: ads[i].price,

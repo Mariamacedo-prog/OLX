@@ -5,7 +5,7 @@ const modelSchema = {
   idUser: String,
   state: String,
   category: String,
-  image: [Object],
+  images: [Object],
   dateCreated: Date,
   title: String,
   price: Number,
