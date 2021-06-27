@@ -39,6 +39,17 @@ module.exports = {
       return;
     }
 
+    if (!mongoose.Types.ObjectId.isValid(cat)) {
+      res.json({ error: "Id de categoria inexistente" });
+      return;
+    }
+
+    const category = await Category.findById(cat);
+    if (!category) {
+      res.json({ error: "Categoria inexistente" });
+      return;
+    }
+
     if (price) {
       //R$ 8.000,65   8000.65
       price = price.replace(".", "").replace(",", ".").replace("R$ ", "");
