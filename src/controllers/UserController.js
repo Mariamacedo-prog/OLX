@@ -93,7 +93,7 @@ module.exports = {
       updates.passwordHash = await bcrypt.hash(data.password, 10);
     }
 
-    await User.findOneAndUpdate({ token: data.token, $set: updates });
+    await User.findOneAndUpdate({ token: data.token }, { $set: updates });
 
     res.json({});
   },
