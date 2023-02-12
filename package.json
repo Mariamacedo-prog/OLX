@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "devstart": "nodemon server.js",
-    "build": "node server.js"
+    "build": ""
   },
   "keywords": [],
   "author": "",
@@ -20,8 +20,7 @@
     "express-validator": "^6.12.0",
     "jimp": "^0.16.1",
     "mongoose": "^5.12.14",
-    "uuid": "^8.3.2",
-    "vercel-sapper": "^0.44.0"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
