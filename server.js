@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const fileupload = require("express-fileupload");
 const apiRoutes = require("./src/routes");
+const path = require('path');
 
 mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
@@ -22,7 +23,7 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use(fileupload());
 
-server.use(express.static(__dirname + "/public"));
+server.use(express.static(path.join(__dirname + '/public')));
 
 server.use("/", apiRoutes);
 
